@@ -11,7 +11,21 @@ require("rose-pine").setup({
 	disable_italics = true,
 })
 
-vim.cmd.colorscheme("catppuccin")
+require("sweetie").setup({
+  pumblend = {
+    enable = true,
+    transparency_amount = 0,
+  },
+  overrides = {},
+  integrations = {
+    neorg = true,
+    neogit = true,
+    telescope = true,
+  },
+  terminal_colors = true,
+})
+
+vim.cmd.colorscheme("sweetie")
 
 vim.cmd("match @neorg.headings.3.prefix /TODO/")
 vim.cmd("2match @neorg.headings.3.prefix /UPD/")
