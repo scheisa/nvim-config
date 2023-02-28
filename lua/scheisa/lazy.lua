@@ -19,6 +19,7 @@ return require("lazy").setup({
 
 	{ "rose-pine/neovim", as = "rose-pine", lazy = true },
 	{ "catppuccin/nvim", as = "catppuccin", lazy = true },
+    {"NTBBloodbath/sweetie.nvim"},
 
 	{ "ThePrimeagen/harpoon", lazy = true },
 
