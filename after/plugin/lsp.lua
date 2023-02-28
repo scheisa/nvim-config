@@ -41,6 +41,11 @@ lsp['pylsp'].setup({
 	on_attach = on_attach,
 })
 
+lsp['rust_analyzer'].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+
 lsp['cssls'].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
