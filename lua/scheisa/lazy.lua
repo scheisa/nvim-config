@@ -19,12 +19,15 @@ return require("lazy").setup({
 
     { "rose-pine/neovim", as = "rose-pine", lazy = true },
     { "catppuccin/nvim", as = "catppuccin", lazy = true },
+    { "folke/tokyonight.nvim", lazy = true },
+    "rebelot/kanagawa.nvim",
     { "NTBBloodbath/sweetie.nvim" },
 
     { "ThePrimeagen/harpoon", lazy = true },
 
     {
         "nvim-treesitter/nvim-treesitter", build = ":TSUpdate",
+        "nvim-treesitter/nvim-treesitter-textobjects",
     },
 
     "tpope/vim-surround",
@@ -50,7 +53,7 @@ return require("lazy").setup({
     "L3MON4D3/LuaSnip",
 
     { "folke/zen-mode.nvim", lazy = true },
-    { "folke/tokyonight.nvim", lazy = true },
+    "shortcuts/no-neck-pain.nvim",
 
     { "mfussenegger/nvim-dap", lazy = true },
     { "rcarriga/nvim-dap-ui", lazy = true },

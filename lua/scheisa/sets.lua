@@ -26,5 +26,7 @@ vim.opt.scrolloff = 8
 vim.g.netrw_banner = 0
 
 vim.opt.laststatus = 3
+vim.opt.showmode = false
 
 vim.opt.conceallevel = 2
+vim.opt["fillchars"] = "eob: ,"

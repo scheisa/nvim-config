@@ -61,6 +61,11 @@ lsp['texlab'].setup({
 	on_attach = on_attach,
 })
 
+lsp['gopls'].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+
 -- lsp['lua_ls'].setup({
 -- 	capabilities = capabilities,
 -- 	on_attach = on_attach,

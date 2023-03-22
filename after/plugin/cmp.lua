@@ -2,12 +2,19 @@ local cmp = require("cmp")
 local lspkind = require("lspkind")
 
 require("luasnip/loaders/from_vscode").lazy_load()
-vim.o.completeopt = "menu,menuone,noselect"
+-- vim.o.completeopt = "menu,menuone"
 
 cmp.setup({
+
+    completion = {
+        -- completeopt = 'menu,menuone,noinsert',
+        completeopt = 'menu,menuone,noinsert,noselect',
+    },
+    preselect = cmp.PreselectMode.None,
+
     snippet = ({
         expand = function(args)
-           require("luasnip").lsp_expand(args.body)
+            require("luasnip").lsp_expand(args.body)
         end,
     }),
     mapping = cmp.mapping.preset.insert({
@@ -15,9 +22,9 @@ cmp.setup({
         -- ["<C-Space>"] = cmp.mapping.complete(),
     }),
     sources = cmp.config.sources({
-        { name = 'luasnip' },
         { name = 'nvim_lsp' },
-        { name = 'buffer' , keyword_length = 3},
+        { name = 'luasnip' },
+        { name = 'buffer', keyword_length = 3 },
         { name = 'path' },
         { name = 'neorg' },
     }),
