@@ -1,6 +1,6 @@
 require('nvim-treesitter.configs').setup {
 
-    ensure_installed = { "python", "lua", "html", "css", "rust", "help" },
+    -- ensure_installed = { "python", "lua", "html", "css", "rust", "help" },
 
     sync_install = false,
     auto_install = true,
@@ -34,7 +34,7 @@ require('nvim-treesitter.configs').setup {
             -- and should return the mode ('v', 'V', or '<c-v>') or a table
             -- mapping query_strings to modes.
             selection_modes = {
-                ['@parameter.outer'] = 'v', -- charwise
+                ['@parameter.outer'] = 'V', -- charwise
                 ['@function.outer'] = 'V', -- linewise
                 ['@class.outer'] = '<c-v>', -- blockwise
             },

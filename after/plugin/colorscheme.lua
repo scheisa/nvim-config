@@ -1,14 +1,14 @@
 require("catppuccin").setup({
-    transparent_background = true,
+    transparent_background = false,
     no_italic = false,
     no_bold = false,
 })
 
 require("rose-pine").setup({
     dark_variant = "moon",
-    disable_background = true,
-    disable_float_background = true,
-    disable_italics = true,
+    disable_background = false,
+    disable_float_background = false,
+    disable_italics = false,
 })
 
 require("sweetie").setup({
@@ -39,10 +39,10 @@ require('kanagawa').setup({
     },
 })
 
-vim.cmd.colorscheme("catppuccin")
+vim.cmd.colorscheme("nord")
 -- sweetie stuff
-vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "none" })
+-- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+-- vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "none" })
 
 vim.cmd("match @neorg.headings.3.prefix /TODO/")
 vim.cmd("2match @neorg.headings.3.prefix /UPD/")

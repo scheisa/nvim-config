@@ -4,12 +4,12 @@
 function Status_line()
     -- ᚺᚨᛚᛗ·ᛟᚠ·ᚨᚹᛖ
 
-    local buffer = '%#Visual#[%-n]'
-    local modified = '%-m%#ColorColumn#'
-    local line_no = '%#IncSearch#[%l:%L]'
+    local buffer = "%#Visual# [%-n]"
+    local modified = "%-m%#ColorColumn#"
+    local line_no = "%#IncSearch#[%l:%L]"
     local file = vim.fn.expand("%:t")
     local mode = "%#IncSearch# " .. string.upper(vim.api.nvim_get_mode().mode) .. " %#ColorColumn#"
-    local date = "%#Visual# " .. os.date("%H:%M | %d-%m-%Y ")
+    local date = "%#Visual#" .. os.date(" %H:%M | %d-%m-%Y |")
 
     local cwd = function()
         local home = ":\\Users\\38097"
@@ -33,7 +33,7 @@ function Status_line()
         return count["i"] .. count["h"] .. count["w"] .. count["e"]
     end
 
-    local rhs = string.format("%s %s %s %s %s", mode, buffer, cwd(), modified, lsp())
+    local rhs = string.format("%s%s %s %s %s", mode, buffer, cwd(), modified, lsp())
     local mid = "%=" .. file .. "%="
     local lhs = string.format("%s %s", date, line_no)
 

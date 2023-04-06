@@ -20,14 +20,16 @@ return require("lazy").setup({
     { "rose-pine/neovim", as = "rose-pine", lazy = true },
     { "catppuccin/nvim", as = "catppuccin", lazy = true },
     { "folke/tokyonight.nvim", lazy = true },
-    "rebelot/kanagawa.nvim",
+    {"rebelot/kanagawa.nvim"},
     { "NTBBloodbath/sweetie.nvim" },
+    {"shaunsingh/nord.nvim"},
 
     { "ThePrimeagen/harpoon", lazy = true },
 
     {
         "nvim-treesitter/nvim-treesitter", build = ":TSUpdate",
         "nvim-treesitter/nvim-treesitter-textobjects",
+        "nvim-treesitter/nvim-treesitter-context"
     },
 
     "tpope/vim-surround",
@@ -61,7 +63,4 @@ return require("lazy").setup({
 
     { "nvim-neorg/neorg", build = ":Neorg sync-parsers", lazy = true },
 
-    "ja-ford/delaytrain.nvim",
-
-    "jinh0/eyeliner.nvim",
 })
