@@ -1,6 +1,7 @@
 require('nvim-treesitter.configs').setup {
 
-    -- ensure_installed = { "python", "lua", "html", "css", "rust", "help" },
+    -- ensure_installed = { "python", "lua", "html", "css", "rust", "help", "vim"},
+    ensure_installed = { "python", "lua", "html", "css", "rust", "vim"},
 
     sync_install = false,
     auto_install = true,
