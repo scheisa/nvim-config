@@ -11,6 +11,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 
 vim.opt.rtp:prepend(lazypath)
+
 return require("lazy").setup({
     { "ThePrimeagen/vim-be-good" },
 
@@ -23,11 +24,13 @@ return require("lazy").setup({
     {"rebelot/kanagawa.nvim"},
     { "NTBBloodbath/sweetie.nvim" },
     {"shaunsingh/nord.nvim"},
+    "rockerBOO/boo-colorscheme-nvim",
 
     { "ThePrimeagen/harpoon", lazy = true },
 
     {
-        "nvim-treesitter/nvim-treesitter", build = ":TSUpdate",
+        -- "nvim-treesitter/nvim-treesitter", build = ":TSUpdate",
+        "nvim-treesitter/nvim-treesitter",
         "nvim-treesitter/nvim-treesitter-textobjects",
         "nvim-treesitter/nvim-treesitter-context"
     },
@@ -62,5 +65,7 @@ return require("lazy").setup({
     { "jay-babu/mason-nvim-dap.nvim", lazy = true },
 
     { "nvim-neorg/neorg", build = ":Neorg sync-parsers", lazy = true },
+
+    {"stevearc/oil.nvim", lazy = true},
 
 })
