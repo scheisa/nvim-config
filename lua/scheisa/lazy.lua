@@ -68,4 +68,5 @@ return require("lazy").setup({
 
     {"stevearc/oil.nvim", lazy = true},
 
+    {"folke/trouble.nvim"},
 })

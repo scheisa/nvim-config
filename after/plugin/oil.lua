@@ -1,8 +1,6 @@
--- require("oil").setup()
-
 vim.api.nvim_set_hl(0, "OilDir", {link = "Directory"})
 
-vim.keymap.set("n", "<leader>e", require("oil").open)
+vim.keymap.set("n", "<leader>ei", require("oil").open)
 
 require("oil").setup({
     -- Id is automatically added at the beginning, and name at the end
