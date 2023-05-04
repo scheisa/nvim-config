@@ -27,6 +27,7 @@ cmp.setup({
         { name = 'buffer', keyword_length = 3 },
         { name = 'path' },
         { name = 'neorg' },
+        { name = 'spell' },
     }),
     window = ({
         completion = cmp.config.window.bordered(),

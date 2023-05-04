@@ -1,12 +1,12 @@
 require("catppuccin").setup({
-    transparent_background = false,
+    transparent_background = true,
     no_italic = false,
     no_bold = false,
 })
 
 require("rose-pine").setup({
     dark_variant = "moon",
-    disable_background = false,
+    disable_background = true,
     disable_float_background = false,
     disable_italics = false,
 })
@@ -39,7 +39,7 @@ require('kanagawa').setup({
     },
 })
 
-vim.cmd.colorscheme("catppuccin-frappe")
+vim.cmd.colorscheme("rose-pine")
 -- sweetie stuff
 -- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 -- vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "none" })

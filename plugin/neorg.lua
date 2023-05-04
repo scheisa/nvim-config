@@ -1,7 +1,7 @@
 require('neorg').setup {
 	load = {
 		["core.defaults"] = {},
-		["core.norg.dirman"] = {
+		["core.dirman"] = {
 			config = {
 				workspaces = {
 					home = "~/Notes/home",
@@ -9,7 +9,7 @@ require('neorg').setup {
 			}
 		},
 
-		["core.norg.concealer"] = {
+		["core.concealer"] = {
 			config = {
 				folds = false,
 				icons = {
@@ -36,7 +36,7 @@ require('neorg').setup {
 
 		["core.integrations.nvim-cmp"] = {},
 
-		["core.norg.completion"] = {
+		["core.completion"] = {
 			config = {
 				engine = "nvim-cmp"
 			}
