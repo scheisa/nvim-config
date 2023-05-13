@@ -21,9 +21,9 @@ return require("lazy").setup({
     { "rose-pine/neovim", as = "rose-pine", lazy = true },
     { "catppuccin/nvim", as = "catppuccin", lazy = true },
     { "folke/tokyonight.nvim", lazy = true },
-    {"rebelot/kanagawa.nvim"},
+    { "rebelot/kanagawa.nvim" },
     { "NTBBloodbath/sweetie.nvim" },
-    {"shaunsingh/nord.nvim"},
+    { "shaunsingh/nord.nvim" },
     "rockerBOO/boo-colorscheme-nvim",
 
     { "ThePrimeagen/harpoon", lazy = true },
@@ -67,7 +67,7 @@ return require("lazy").setup({
 
     { "nvim-neorg/neorg", build = ":Neorg sync-parsers", lazy = true },
 
-    {"stevearc/oil.nvim", lazy = true},
+    { "stevearc/oil.nvim", lazy = true },
 
-    {"folke/trouble.nvim"},
+    { "folke/trouble.nvim" },
 })

@@ -1,5 +1,5 @@
 require("catppuccin").setup({
-    transparent_background = true,
+    transparent_background = false,
     no_italic = false,
     no_bold = false,
 })

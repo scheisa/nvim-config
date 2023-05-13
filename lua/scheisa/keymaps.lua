@@ -45,3 +45,8 @@ vim.keymap.set("n", "<leader>nc", function()
     vim.cmd('!git commit -m "' .. dateTime .. '"')
     vim.cmd("!git push -u origin")
 end)
+
+-- stupid local stuff
+vim.keymap.set("n", "<leader>sf", function()
+    package.loaded.translator = nil
+end)
