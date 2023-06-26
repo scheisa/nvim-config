@@ -49,4 +49,5 @@ end)
 -- stupid local stuff
 vim.keymap.set("n", "<leader>sf", function()
     package.loaded.translator = nil
+    print("cache cleared")
 end)
