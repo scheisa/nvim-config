@@ -1,5 +1,12 @@
-vim.keymap.set("n", "<leader>h", [[<cmd>lua require("harpoon.ui").toggle_quick_menu()<CR>]], {noremap =true})
-vim.keymap.set("n", "<leader>j", [[<cmd>lua require("harpoon.ui").nav_file(1)<CR>]], {noremap =true})
-vim.keymap.set("n", "<leader>k", [[<cmd>lua require("harpoon.ui").nav_file(2)<CR>]], {noremap =true})
-vim.keymap.set("n", "<leader>l", [[<cmd>lua require("harpoon.ui").nav_file(3)<CR>]], {noremap =true})
-vim.keymap.set("n", "<leader>a", [[<cmd>lua require("harpoon.mark").add_file()<CR>]], {noremap =true})
+local mark = require("harpoon.mark")
+local ui = require("harpoon.ui")
+
+-- menu
+vim.keymap.set("n", "<leader>a", mark.add_file)
+vim.keymap.set("n", "<C-e>", ui.toggle_quick_menu)
+
+-- navigation
+vim.keymap.set("n", "<C-h>", function() ui.nav_file(1) end)
+vim.keymap.set("n", "<C-j>", function() ui.nav_file(2) end)
+vim.keymap.set("n", "<C-k>", function() ui.nav_file(3) end)
+vim.keymap.set("n", "<C-l>", function() ui.nav_file(4) end)

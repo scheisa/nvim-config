@@ -1,18 +1,6 @@
-local mason = require("mason")
-local mason_lspconfig = require("mason-lspconfig")
 local lsp = require("lspconfig")
 local cmp = require("cmp_nvim_lsp")
 
-mason.setup()
-
-mason_lspconfig.setup({
-    ensure_installed = {
-        "rust_analyzer",
-        "pyright",
-        "cssls",
-        "html",
-    },
-})
 local on_attach = function(client, bufnr)
     vim.keymap.set("n", "gd", vim.lsp.buf.definition)
     vim.keymap.set("n", "K", vim.lsp.buf.hover)
@@ -27,9 +15,9 @@ local on_attach = function(client, bufnr)
     vim.keymap.set("i", "<C-h>", vim.lsp.buf.signature_help)
 
     vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics,
-        { virtual_text = true, signs = true, update_in_insert = false, })
+    { virtual_text = true, signs = true, update_in_insert = false, })
     vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(
-        vim.lsp.handlers.signature_help, { border = "rounded", close_events = { "BufHidden", "InsertLeave" }, })
+    vim.lsp.handlers.signature_help, { border = "rounded", close_events = { "BufHidden", "InsertLeave" }, })
     vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded", })
     vim.diagnostic.config { float = { border = "rounded" }, }
 end
@@ -41,32 +29,12 @@ lsp["pylsp"].setup({
     on_attach = on_attach,
 })
 
-lsp["pyright"].setup({
-    capabilities = capabilities,
-    on_attach = on_attach,
-})
-
-lsp["rust_analyzer"].setup({
-    capabilities = capabilities,
-    on_attach = on_attach,
-})
-
-lsp["cssls"].setup({
-    capabilities = capabilities,
-    on_attach = on_attach,
-})
-
-lsp["html"].setup({
-    capabilities = capabilities,
-    on_attach = on_attach,
-})
-
 lsp["texlab"].setup({
     capabilities = capabilities,
     on_attach = on_attach,
 })
 
-lsp["gopls"].setup({
+lsp["clangd"].setup({
     capabilities = capabilities,
     on_attach = on_attach,
 })

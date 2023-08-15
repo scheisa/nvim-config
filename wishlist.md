@@ -1,0 +1,12 @@
+# Plugins
+    - [0] telescope
+    - [0] oil
+    - [0] harpoon
+    - [0] treesitter
+    - [0] lsp
+    - [0] cmp
+    - [0] colorscheme
+    - [x] luasnips ( + friendly snips )
+    - [x] undotree (?)
+    - [x] buffurline (?)
+    - [x] cmp_cmdline (?)
